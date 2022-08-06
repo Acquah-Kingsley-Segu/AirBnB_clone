@@ -17,5 +17,7 @@ class Person:
         """ Introduces the instance object """
         print(f"Hello, my name is {self.name}")
 
+
+
 person = Person("Acquah Kingsley Segu")
 person.introduce()
