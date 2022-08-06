@@ -17,7 +17,5 @@ class Person:
         """ Introduces the instance object """
         print(f"Hello, my name is {self.name}")
 
-
-if __name__ == "__main__":
-    person = Person("Acquah Kingsley Segu")
-    person.introduce()
+person = Person("Acquah Kingsley Segu")
+person.introduce()
