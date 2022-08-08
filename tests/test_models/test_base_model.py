@@ -8,6 +8,16 @@ from ...models.base_model import BaseModel
 class TestBaseModel(unittest.TestCase):
 
     """ A test class that inherits TestCase from unittest to perform testing """
+    
+    def test__init__(self):
+        """ Tests if the __init__ works """
+        my_model = BaseModel()
+        self.assertIsNotNone(my_model)
+        my_model_json = my_model.to_dict()
+        my_new_model = BaseModel(**my_model_json)
+        self.assertIsNotNone(my_new_model)
+        self.assertEqual(my_new_model.id, my_model.id)
+
     def test_save(self):
         """ Function that test the save instance method in BaseModel class """
         model = BaseModel()
