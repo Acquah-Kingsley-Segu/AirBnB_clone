@@ -2,6 +2,8 @@
 
 from datetime import datetime
 import uuid
+from models import storage
+
 """
     Contains a base class definition for all classes to be used in this project
 """
@@ -19,11 +21,13 @@ class BaseModel():
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
+            storage.new(self.__dict__)
 
     def __str__(self):
         return f"[BaseModel] ({self.id}) {self.__dict__}"
 
     def save(self):
+        storage.save()
         self.updated_at = datetime.now()
     
     def to_dict(self):
