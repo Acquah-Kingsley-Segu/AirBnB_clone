@@ -16,7 +16,8 @@ class HBNBCommand(cmd.Cmd):
 
 
     def do_quit(self, line):
-        """ exits user from interpreter """
+        """Quit command to exit the program
+        """
         return True
 
     def do_EOF(self, line):
@@ -27,7 +28,7 @@ class HBNBCommand(cmd.Cmd):
 
     def postloop(self):
         """ run before cmdloop ends """
-        print()
+        print("")
 
 
 if __name__ == "__main__":
