@@ -1,0 +1,10 @@
+header{
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #CCCCCC;
+	height: 70px;
+	width: 100%;
+}
+
+header::before{
+	content: url(../images/logo.png);
+}
